@@ -1,0 +1,28 @@
+PODS:
+  - DynamicBlurView (4.1.0)
+  - ExpandingMenu (0.4.0)
+  - FSCalendar (2.8.1)
+  - PopupDialog (1.1.1):
+    - DynamicBlurView (~> 4.0)
+
+DEPENDENCIES:
+  - ExpandingMenu (~> 0.4)
+  - FSCalendar
+  - PopupDialog (~> 1.1)
+
+SPEC REPOS:
+  trunk:
+    - DynamicBlurView
+    - ExpandingMenu
+    - FSCalendar
+    - PopupDialog
+
+SPEC CHECKSUMS:
+  DynamicBlurView: 58e18fae80bb614e34681a4486870e7d257b62e8
+  ExpandingMenu: 3187a4ed1aa1aea85418e444c213e4cd6063c122
+  FSCalendar: 5245140456fcbcac5824c203b98bd8068bdfee1a
+  PopupDialog: 720c92befd8bc23c13442254945213db5612f149
+
+PODFILE CHECKSUM: bd8d864eb792fdd3f1ea5f43f8e5f28b31670983
+
+COCOAPODS: 1.9.3

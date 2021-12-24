@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReminderViewController" customModule="SlideInTransition" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="bwR-o8-4dD" id="gIZ-F9-YfU"/>
+                <outlet property="clearButton" destination="P1Y-SO-nu4" id="6W0-bg-a8D"/>
+                <outlet property="doneButton" destination="LtO-2H-fZy" id="qEZ-Io-ait"/>
+                <outlet property="eightButton" destination="sdh-z0-wc1" id="ocv-xS-DGR"/>
+                <outlet property="fifteenButton" destination="1gz-tP-2gk" id="qpO-z4-Fm2"/>
+                <outlet property="nowButton" destination="aDL-9Z-UPF" id="ypQ-b8-MSz"/>
+                <outlet property="rDatePicker" destination="Kzc-cs-JRn" id="eDt-W9-m2D"/>
+                <outlet property="reminderCalendar" destination="Uc7-OB-q8L" id="frm-eC-KI2"/>
+                <outlet property="todayButton" destination="Evx-bx-Jkk" id="EMe-UY-eyB"/>
+                <outlet property="twentyButton" destination="aQ1-cP-5Gy" id="7MA-1Y-ish"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="4BF-gV-WEp">
+                    <rect key="frame" x="10" y="0.0" width="480" height="500"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="APy-kZ-jNf">
+                            <rect key="frame" x="0.0" y="0.0" width="480" height="50"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1Y-SO-nu4">
+                                    <rect key="frame" x="0.0" y="10" width="240" height="30"/>
+                                    <state key="normal" title="Clear"/>
+                                    <connections>
+                                        <action selector="clearAction:" destination="-1" eventType="touchUpInside" id="Rd2-vA-jLB"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Evx-bx-Jkk">
+                                    <rect key="frame" x="240" y="10" width="240" height="30"/>
+                                    <state key="normal" title="Today"/>
+                                    <connections>
+                                        <action selector="todayAction:" destination="-1" eventType="touchUpInside" id="8Kw-Bc-UGE"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="nhg-8o-Vbl"/>
+                            </constraints>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uc7-OB-q8L" customClass="FSCalendar">
+                            <rect key="frame" x="0.0" y="53" width="480" height="213"/>
+                            <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="213" id="nax-Gu-T5Q"/>
+                            </constraints>
+                        </view>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="Kzc-cs-JRn">
+                            <rect key="frame" x="0.0" y="269" width="480" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="gLw-kc-beU"/>
+                            </constraints>
+                            <connections>
+                                <action selector="reminderDatePicker:" destination="-1" eventType="valueChanged" id="yqS-d7-TYD"/>
+                            </connections>
+                        </datePicker>
+                        <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UAE-QJ-qfU">
+                            <rect key="frame" x="0.0" y="372" width="480" height="75"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdh-z0-wc1">
+                                    <rect key="frame" x="0.0" y="22.5" width="112.5" height="30"/>
+                                    <state key="normal" title="8:00"/>
+                                    <connections>
+                                        <action selector="eightAction:" destination="-1" eventType="touchUpInside" id="O2k-zC-PIc"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gz-tP-2gk">
+                                    <rect key="frame" x="122.5" y="22.5" width="112.5" height="30"/>
+                                    <state key="normal" title="15:00"/>
+                                    <connections>
+                                        <action selector="fifteenAction:" destination="-1" eventType="touchUpInside" id="lYM-XZ-fqP"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQ1-cP-5Gy">
+                                    <rect key="frame" x="245" y="22.5" width="112.5" height="30"/>
+                                    <state key="normal" title="20:00"/>
+                                    <connections>
+                                        <action selector="twentyAction:" destination="-1" eventType="touchUpInside" id="ipu-PV-f9Z"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDL-9Z-UPF">
+                                    <rect key="frame" x="367.5" y="22.5" width="112.5" height="30"/>
+                                    <state key="normal" title="Now"/>
+                                    <connections>
+                                        <action selector="nowAction:" destination="-1" eventType="touchUpInside" id="GMK-BZ-kgJ"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.69803921570000005" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="75" id="596-KZ-43N"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZmB-Oe-J6W">
+                            <rect key="frame" x="0.0" y="450" width="480" height="50"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwR-o8-4dD">
+                                    <rect key="frame" x="0.0" y="10" width="240" height="30"/>
+                                    <state key="normal" title="Cancel"/>
+                                    <connections>
+                                        <action selector="cancelAction:" destination="-1" eventType="touchUpInside" id="HPj-6B-Kj2"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LtO-2H-fZy">
+                                    <rect key="frame" x="240" y="10" width="240" height="30"/>
+                                    <state key="normal" title="Done"/>
+                                    <connections>
+                                        <action selector="doneAction:" destination="-1" eventType="touchUpInside" id="rr0-j5-iQe"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="0.30922826139999998" blue="0.034285498540000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="tB8-5S-2Z2"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="4BF-gV-WEp" secondAttribute="bottom" id="1Nv-V3-i7b"/>
+                <constraint firstItem="4BF-gV-WEp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="N0k-t3-C5I"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4BF-gV-WEp" secondAttribute="trailing" constant="10" id="SSf-vl-uIA"/>
+                <constraint firstItem="4BF-gV-WEp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="YgS-YO-ZrK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="160.86956521739131" y="54.910714285714285"/>
+        </view>
+    </objects>
+</document>

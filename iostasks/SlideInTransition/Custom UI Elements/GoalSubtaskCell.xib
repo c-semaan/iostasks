@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" id="KGk-i7-Jjw" customClass="GoalSubtaskCell" customModule="SlideInTransition" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="358" height="58"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="358" height="58"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxK-SC-Fzb">
+                        <rect key="frame" x="3" y="16" width="26" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="26" id="af4-N3-NKU"/>
+                            <constraint firstAttribute="height" constant="26" id="zBf-jb-bo4"/>
+                        </constraints>
+                        <color key="tintColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <state key="normal" image="arrow.right" catalog="system"/>
+                        <connections>
+                            <action selector="markComplete:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="vJU-BM-sqI"/>
+                        </connections>
+                    </button>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add a Subtask..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7LI-1g-0ai">
+                        <rect key="frame" x="37" y="12" width="283" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="283" id="WPF-KZ-L7r"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                        <connections>
+                            <action selector="enteredTextField:" destination="KGk-i7-Jjw" eventType="editingDidBegin" id="VCM-lU-Xm8"/>
+                        </connections>
+                    </textField>
+                    <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hif-kK-Tkx">
+                        <rect key="frame" x="327.5" y="16" width="26" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="26" id="cIn-4c-JYA"/>
+                            <constraint firstAttribute="height" constant="26" id="s8M-8q-9ma"/>
+                        </constraints>
+                        <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <state key="normal" image="add"/>
+                        <connections>
+                            <action selector="rightAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ok3-mQ-hhx"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Hif-kK-Tkx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="G0s-Oo-aeQ"/>
+                    <constraint firstAttribute="bottom" secondItem="lxK-SC-Fzb" secondAttribute="bottom" constant="16" id="G51-Vt-qoF"/>
+                    <constraint firstAttribute="bottom" secondItem="Hif-kK-Tkx" secondAttribute="bottom" constant="16" id="Jy1-Bh-4As"/>
+                    <constraint firstAttribute="trailing" secondItem="Hif-kK-Tkx" secondAttribute="trailing" constant="4" id="LWF-BP-FSC"/>
+                    <constraint firstItem="7LI-1g-0ai" firstAttribute="leading" secondItem="lxK-SC-Fzb" secondAttribute="trailing" constant="8" id="P2L-Bk-TB9"/>
+                    <constraint firstItem="Hif-kK-Tkx" firstAttribute="leading" secondItem="7LI-1g-0ai" secondAttribute="trailing" constant="7.5" id="SKn-Mu-02M"/>
+                    <constraint firstItem="7LI-1g-0ai" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="Xwe-XN-BeJ"/>
+                    <constraint firstItem="7LI-1g-0ai" firstAttribute="leading" secondItem="lxK-SC-Fzb" secondAttribute="trailing" constant="8" id="Z5b-Kl-BEC"/>
+                    <constraint firstAttribute="bottom" secondItem="7LI-1g-0ai" secondAttribute="bottom" constant="12" id="ZTM-Dx-oAh"/>
+                    <constraint firstItem="Hif-kK-Tkx" firstAttribute="leading" secondItem="7LI-1g-0ai" secondAttribute="trailing" constant="7.5" id="Zyz-26-QWb"/>
+                    <constraint firstItem="7LI-1g-0ai" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="orQ-mA-PIu"/>
+                    <constraint firstItem="lxK-SC-Fzb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="tL0-5B-4b4"/>
+                    <constraint firstItem="lxK-SC-Fzb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="3" id="wWx-mf-56B"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="leftButton" destination="lxK-SC-Fzb" id="CYd-j0-y1a"/>
+                <outlet property="rightButton" destination="Hif-kK-Tkx" id="axJ-I2-ROi"/>
+                <outlet property="subtaskTextView" destination="7LI-1g-0ai" id="Dqc-Qm-2r6"/>
+            </connections>
+            <point key="canvasLocation" x="117.39130434782609" y="94.419642857142847"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="add" width="30" height="30"/>
+        <image name="arrow.right" catalog="system" width="128" height="98"/>
+    </resources>
+</document>
